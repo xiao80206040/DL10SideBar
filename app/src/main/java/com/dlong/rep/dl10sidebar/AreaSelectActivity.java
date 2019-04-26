@@ -52,12 +52,12 @@ public class AreaSelectActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void initView() {
-        imgSearch = findViewById(R.id.img_search);
-        imgBack = findViewById(R.id.img_back);
-        txtTittle = findViewById(R.id.txt_tittle);
-        etSearch = findViewById(R.id.et_search);
-        lvArea = findViewById(R.id.lv_area);
-        sbIndex = findViewById(R.id.sb_index);
+        imgSearch = (ImageView) findViewById(R.id.img_search);
+        imgBack = (ImageView) findViewById(R.id.img_back);
+        txtTittle = (TextView) findViewById(R.id.txt_tittle);
+        etSearch = (EditText) findViewById(R.id.et_search);
+        lvArea = (ListView) findViewById(R.id.lv_area);
+        sbIndex = (DLSideBar) findViewById(R.id.sb_index);
 
         imgSearch.setOnClickListener(this);
         imgBack.setOnClickListener(this);
@@ -126,9 +126,9 @@ public class AreaSelectActivity extends AppCompatActivity implements View.OnClic
             if(!"".equals(s.toString().trim())) {
                 //根据编辑框值过滤联系人并更新联系列表
                 filterContacts(s.toString().trim());
-                sbIndex.setVisibility(View.GONE);
+//                sbIndex.setVisibility(View.GONE);
             } else {
-                sbIndex.setVisibility(View.VISIBLE);
+//                sbIndex.setVisibility(View.VISIBLE);
                 mAdapter.updateListView(mBeans);
             }
         }
