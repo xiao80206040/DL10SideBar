@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 18
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -24,10 +24,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
+    api 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
 //    androidTestCompile 'com.android.support.test:runner:1.0.2'
     // https://mvnrepository.com/artifact/com.android.support.test/runner
 //    compile group: 'com.android.support.test', name: 'runner', version: '1.0.2'
